@@ -32,7 +32,7 @@ O layout foi pensado para se adaptar a diversos dispositivos (mobile, tablet e d
 ---
 <br><br>
 
-**Acesse o projeto através do link:*https://natanael-cloud.github.io/DiscordClone/
+**Acesse o projeto através do link:** https://natanael-cloud.github.io/DiscordClone/
 <br><br>
 
 <img width="554" height="402" alt="image" src="https://github.com/user-attachments/assets/2153dfb1-dd5c-472e-9b0c-36c81239edf1" />
