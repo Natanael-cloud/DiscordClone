@@ -1,0 +1,255 @@
+/* ===== RESET GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que padding e border não aumentem a largura/altura do elemento */
+}
+
+/* ===== ESTILO GERAL DO BODY ===== */
+body {
+  background-color: #fff; /* Fundo branco geral */
+  font-family: 'Open Sans', sans-serif; /* Fonte padrão */
+  color: #23272a; /* Cor padrão do texto */
+}
+
+/* ===== HEADER ===== */
+header {
+  position: relative;
+  width: 100vw; /* Ocupa toda a largura da viewport */
+  height: 459px; /* Altura fixa */
+  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse */
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* ===== FUNDO DO HEADER (imagem de fundo posicionada por trás) ===== */
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Cobre toda a tela */
+  height: 459px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0; /* Fica atrás do conteúdo */
+}
+
+/* ===== CONTEÚDO CENTRAL DO HEADER ===== */
+.header-content {
+  position: relative;
+  max-width: 757px; /* Largura máxima */
+  padding: 0 20px;
+  z-index: 1; /* Fica acima da imagem de fundo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px; /* Espaço entre os elementos */
+  text-align: center;
+  color: white; /* Texto branco sobre imagem escura */
+}
+
+/* ===== TÍTULO DO HEADER ===== */
+.header-content h1 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 40px;
+  line-height: 100%;
+  text-align: center;
+}
+
+/* ===== PARÁGRAFO DO HEADER ===== */
+.header-content p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 100%;
+  max-width: 802px;
+  text-align: center;
+}
+
+/* ===== BOTÕES DO HEADER ===== */
+.btns {
+  display: flex;
+  gap: 16px; /* Espaçamento entre os botões */
+}
+
+/* ===== BOTÃO BRANCO ===== */
+.btns .white {
+  background-color: white;
+  color: #23272a;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 28px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ===== BOTÃO ESCURO ===== */
+.btns .dark {
+  background-color: #23272a;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 28px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ===== SECTIONS PADRÃO ===== */
+section {
+  width: 1280px; /* Largura fixa centralizada */
+  margin: 80px auto; /* Espaçamento vertical + centralização horizontal */
+  display: grid;
+  grid-template-columns: 607px 1fr; /* Imagem + texto */
+  align-items: center;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+/* ===== SECTIONS COM LAYOUT INVERTIDO (imagem à direita) ===== */
+.section-2,
+.section-4 {
+  grid-template-columns: 1fr 608px;
+}
+
+/* ===== IMAGENS DAS SECTIONS ===== */
+section img {
+  width: 100%;
+  height: auto;
+}
+
+/* ===== TÍTULO DAS SECTIONS ===== */
+section .text h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* ===== TÍTULO COM FONTE DIFERENTE NA SECTION 4 ===== */
+.section-4 .text h2 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 40px;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+
+/* ===== PARÁGRAFO DAS SECTIONS ===== */
+section .text p {
+  font-size: 16px;
+  color: #2c2f33;
+  line-height: 1.5;
+}
+
+/* ===== BACKGROUND DIFERENTE PARA ALGUMAS SECTIONS ===== */
+.section-2,
+.section-4 {
+  background-color: #f6f6f6; /* Cinza claro */
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #23272a; /* Cor escura */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* ===== LOGO NO FOOTER ===== */
+footer img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+/* ===== MEDIA QUERIES: TELAS MENORES ===== */
+@media (max-width: 768px) {
+  /* Header adaptado */
+  header {
+    height: auto;
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  /* Ajuste do background para ocupar toda a altura */
+  .header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+  }
+
+  /* Ajustes no conteúdo do header */
+  .header-content {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding: 60px 20px;
+    z-index: 1;
+    gap: 24px;
+  }
+
+  .header-content h1 {
+    font-size: 32px;
+  }
+
+  .header-content p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  /* Botões empilhados verticalmente */
+  .btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btns button {
+    width: 100%;
+  }
+
+  /* Sections com layout em coluna */
+  section {
+    width: 100%;
+    padding: 40px 20px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* Imagem acima do texto */
+  section img {
+    order: -1;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .section-2,
+  .section-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .text h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .text p {
+    font-size: 16px;
+  }
+
+  /* Footer ajustado para telas menores */
+  footer {
+    padding: 40px 20px;
+  }
+
+  footer img {
+    width: 32px;
+  }
+}
